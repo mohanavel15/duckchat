@@ -36,6 +36,7 @@ func (a *Agent) GetVqd() error {
 	}
 
 	r.Header.Add("x-vqd-accept", "1")
+	r.Header.Add("User-Agent", USER_AGENT)
 
 	client := &http.Client{}
 	resp, err := client.Do(r)
@@ -67,6 +68,7 @@ func (a *Agent) MakeRequest() (string, error) {
 
 	r.Header.Add("Content-Type", "application/json")
 	r.Header.Add("x-vqd-4", a.vqd)
+	r.Header.Add("User-Agent", USER_AGENT)
 
 	client := &http.Client{}
 	resp, err := client.Do(r)
