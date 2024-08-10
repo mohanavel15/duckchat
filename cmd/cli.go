@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	agent := duckchat.NewAgent(duckchat.GPT3dot5Turbo)
+	agent := duckchat.NewAgent(duckchat.GPT4o)
 
 	for {
 		fmt.Print("user > ")
